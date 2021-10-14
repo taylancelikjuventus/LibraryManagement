@@ -1,0 +1,20 @@
+Library Management System
+
+To login system use followings :
+username : admin
+password : admin
+
+Sign Up button in Login form is not implemented.
+
+Books : User can add new book to database or view all books available.
+
+Student : We can add new student so that he can borrow books
+          We can view all Student information they are registered.
+
+Issue Book : This menu is used when giving books to the student
+
+Return Book : This menu is used if any student returns books which is  borrowed.
+
+Complete Book Details : This is most specific menu which shows all required
+                        information for issued and returned books and includes
+                        time information when books are issued/returened.

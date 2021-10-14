@@ -1,0 +1,61 @@
+﻿
+In this project we used MSSQL DB
+
+**************************************************
+create database librarymanagementsystem;  //create new database
+
+***************************************************
+/*Table used for Login form :*/       table  LoginTable
+create table loginTable(
+id int not null identity(1,1) primary key,
+username varchar(150) not null,
+pass varchar(150) not null
+);
+
+insert into logintable(username,pass) values('admin','admin');
+
+*********************************************************
+/*This table stores all books available in Library*/    table NewBook
+
+create table NewBook(
+bid int not null identity(1,1) primary key,
+bName varchar(250) not null,
+bAuthor varchar(250) not null,
+bPubl varchar(250) not null,
+bPDate varchar(250) not null,
+bPrice float not null,
+bQuan bigint not null,      //This shows total number of books 
+avail_book_qty              //this can be used to store available number of books in Library
+                            // because if 1 book is issued we have to subtract 1 from this value
+) ;
+
+**********************************************************
+/*This table stores all students registered*/        table NewStudent
+
+create table NewStudent(
+stuid int not null identity(1,1) primary key ,
+sname varchar(250) not null,
+enroll varchar(250) not null,
+dep varchar(250) not null,
+sem varchar(250) not null,
+contact bigint not null ,
+email varchar(250) not null,
+);
+
+******************************************************
+/*This table stores issued books*/                        table IssueBook
+
+create table IssueBook(
+id int not null identity(1,1) primary key ,
+std_enroll varchar(250) not null,
+std_name varchar(250) not null,
+std_dep varchar(250) not null,
+std_sem varchar(250) not null,
+std_contact bigint not null,
+std_email varchar(250) not null,
+book_name varchar(1250) not null ,
+book_issue_date varchar(250) not null ,
+book_return_date varchar(250) not null 
+);
+
+*********************************************************
